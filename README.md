@@ -13,5 +13,5 @@
 ## Results
 * Fast (Linear) Convergence Rete compare to SGD
 
-![convergence rates]
+[convergence rates]
 (https://github.com/tianbingsz/sparkLR/tree/master/Figure/convergence.jpg)
