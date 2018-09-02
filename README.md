@@ -1,4 +1,4 @@
-## Efficient yet Simple SparkLR Machine Learning Training Algorithms and Systems.
+## Efficient SparkLR Machine Learning Training Algorithms and Systems.
 
 ### Core Methodologies
 * Problem: Image Search Ads CTR (click-through-rate) prediction with queries/clicks and images.
@@ -11,6 +11,8 @@
 * Achieved near production AUC accuracy (on real online traffic testing) with much less number of machines.
 
 ## Results
-
+* Fast (Linear) Convergence Rete compare to SGD
+![image of convergence]
+(https://github.com/tianbingsz/sparkLR/tree/master/Figure/convergence.pdf)
 
 
