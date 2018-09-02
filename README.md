@@ -16,4 +16,6 @@
 ![image of convergence]
 (https://github.com/tianbingsz/sparkLR/tree/master/Figure/convergence.pdf)
 
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+
 
