@@ -15,5 +15,3 @@
 
 ![convergence rates]
 (https://github.com/tianbingsz/sparkLR/tree/master/Figure/convergence.jpg)
-
-
