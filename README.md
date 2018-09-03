@@ -1,5 +1,6 @@
 ## Efficient LR Machine Learning End-to-End Distributed Training on Spark.
 * Author: Tianbing XU (Baidu Research, CA)
+* Code Built: Nov. 2015.
 
 ### Core Methodologies
 * Problem: Image Search Ads CTR (click-through-rate) prediction with queries/clicks and images.
@@ -17,7 +18,7 @@ The motivation behind introducing full batched Conjugate Gradient to distributed
 tradeoff between communication and computation. As communication cost (one or two orders slower than in-memory computation) 
 becomes the bottleneck of the training time, it is highly desirable to reduce the communication rounds from ![equation](http://latex.codecogs.com/gif.latex?O%281/%5Cepsilon%29%24%20%28SGD%29) to ![equation](http://latex.codecogs.com/gif.latex?log%281/%5Cepsilon%29). Thus, Conjugate Gradient becomes an excellent choice. L-BFGS is another choice with worse 
 memory cost for really large training data (we observed Out-of-Memory issues). As for LR, since the Hessian matrix has a simple,
-closed, diagonal form, it is at the same effiency to transfer the Hessian matrix as a gradient vector between the master and worker nodes via network.
+closed, diagonal form, it is at the same effiency to transfer the Hessian matrix (or ![equation](http://latex.codecogs.com/gif.latex?\mu%27%20H%20\mu)) as a gradient vector between the master and worker nodes via network.
 
 ### Architecture Design
 We implement Parameter Server Architecture based on the Spark Distributed Computing Framework.
@@ -37,7 +38,7 @@ We implement Parameter Server Architecture based on the Spark Distributed Comput
 * ### 10 days online traffic testing VS Baidu's production (Deep Learning with more machines).
 ![auccomp](https://user-images.githubusercontent.com/22249000/44961066-851c2180-aebf-11e8-8abc-0ac1a70b333a.png)
 
-## Video
+## Video (from 52 min)
 [![Spark Summit](https://img.youtube.com/vi/mD8EldWuN7k/0.jpg)](https://www.youtube.com/watch?v=mD8EldWuN7k)
 
 
@@ -46,3 +47,5 @@ We implement Parameter Server Architecture based on the Spark Distributed Comput
 "Resilient Distributed Datasets: A Fault-Tolerant Abstraction for In-Memory Cluster Computing", NSDI 2012. Best Paper Award.
 
 * Nesterov, Yurii, "Introductory Lectures on Convex Optimization: A Basic Course", Springer, 2014.
+
+* Y. H. Dai, Y. Yuan, "A Nonlinear Conjugate Gradient Method with a Strong Global Convergence Property", SIAM J. Optim, 1999.
