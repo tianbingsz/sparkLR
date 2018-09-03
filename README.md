@@ -15,7 +15,7 @@
 ### Communication vs Computation Tradeoff
 The motivation behind introducing full batched Conjugate Gradient to distributed workers is to achieve better 
 tradeoff between communication and computation. As communication cost (one or two orders slower than in-memory computation) 
-becomes the bottleneck of the training time, it is highly desirable to reduce the communication rounds from ![equation](http://latex.codecogs.com/gif.latex?O%281/%5Cepsilon%29%24%20%28SGD%29%20to%20%24%5Clog%281/%5Cepsilon%29). Thus, Conjugate Gradient becomes an excellent choice. L-BFGS is another choice with worse 
+becomes the bottleneck of the training time, it is highly desirable to reduce the communication rounds from ![equation](http://latex.codecogs.com/gif.latex?O%281/%5Cepsilon%29%24%20%28SGD%29) to ![equation](http://latex.codecogs.com/gif.latex?log%281/%5Cepsilon%29). Thus, Conjugate Gradient becomes an excellent choice. L-BFGS is another choice with worse 
 memory cost for really large training data (we observed Out-of-Memory issues). As for LR, since the Hessian matrix has a simple,
 closed, diagonal form, it is at the same effiency to transfer the Hessian matrix as a gradient vector between the master and worker nodes via network.
 
