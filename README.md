@@ -23,7 +23,7 @@ closed, diagonal form, it is at the same effiency to transfer the Hessian matrix
 
 ### Architecture Design
 We implement Parameter Server Architecture based on the Spark Distributed Computing Framework.
-![archicture](https://user-images.githubusercontent.com/22249000/44966504-769a2e00-aef0-11e8-9447-0279f32c1767.jpg)
+![archicture](https://user-images.githubusercontent.com/3246048/45192989-b159da00-b200-11e8-8a50-daa2bd45bfc3.png)
 
 * The master node is responsible for aggregating the gradient and Hessian matrix to update the parameters ![equation](http://latex.codecogs.com/gif.latex?W), and sending updated parameters to all the worker nodes.
 
