@@ -1,6 +1,6 @@
 ## Efficient LR Machine Learning End-to-End Distributed Training on Spark.
-* Author: Tianbing XU (Baidu Research, CA)
-* Collaborators: Liang Zhao (Baidu Research, CA)
+* Author: Tianbing XU
+* Collaborators: Liang Zhao
 * Code Built: Nov. 2015.
 
 ### Core Methodologies
